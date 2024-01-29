@@ -1,0 +1,14 @@
+[package]
+name = "wasm_sphere"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+extism-pdk = {git = "https://github.com/extism/rust-pdk"}
+anyhow = "1.0.75"
+serde = "1.0.188"
+
+[lib]
+crate_type = ["cdylib"]
