@@ -5,10 +5,15 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+
 [dependencies]
 extism-pdk = {git = "https://github.com/extism/rust-pdk"}
 anyhow = "1.0.75"
 serde = "1.0.188"
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+web-sys = "0.3"
 
 [lib]
 crate_type = ["cdylib"]
