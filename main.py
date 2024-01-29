@@ -2,7 +2,7 @@ import extism
 import json
 
 manifest = {"wasm": [
-    {"url": "http://localhost:8000/wasm_sphere.wasm"}]}
+    {"path": "./target/wasm32-unknown-unknown/debug/wasm_sphere.wasm"}]}
 with extism.Plugin(manifest, wasi=True) as plugin:
     wasm_vowel_count = plugin.call(
         'uv_sphere',
